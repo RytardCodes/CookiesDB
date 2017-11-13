@@ -4,6 +4,7 @@ A simple sqlite wrapper that helps you use Basic sql Commands/Codes
 ## Requirements
   - **NodeJS 8+**  
   - **Any Javascript Code that you want to Use databases on!**
+  - **Sqlite3 Installed, please do `npm i --s sqlite3` to install!**
   
 ## Examples
 
