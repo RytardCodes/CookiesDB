@@ -4,7 +4,8 @@
     CookieDB's Purpose is for Users to use it for Cookies System on Discord.
     CookieDB is also a Revival of the Deprecated named discord-eco, made by TrueXPixels
 
-    Created By: Boujee#9310, TrueXPixels#1636
+    Created By: Boujee#9310
+    Special Thanks to: OOF#3764
 */
 
 const sqlite3 = require('sqlite3'); // The sqLite Package
@@ -117,11 +118,6 @@ module.exports = {
         const getInfo = new Promise((resolve, error) => {
 
             // Check if text is a string
-            if (typeof text !== 'string') {
-                console.log('TEXT is NOT A STRING');
-                return error('ERROR: TEXT is NOT A STRING')
-            }
-
             let db;
             let response;
 
@@ -166,4 +162,13 @@ module.exports = {
 
     },
 
-};
+    getObject: function(text) {
+        const getInfo = new Promise((resolve, error) => {
+            if (typeof text !== 'object') {
+                return error('Cannot get Values from a String or Integer! Please make it an Object.');
+            };
+            resolve(text);
+        })
+        return getInfo;
+    }
+}
